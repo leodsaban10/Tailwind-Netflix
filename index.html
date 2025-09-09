@@ -6,12 +6,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="/src/style.css" rel="stylesheet">
 </head>
-<body>
-  <div class="box bg-[url('/wolf.jpg')] bg-cover h-[100vh] w-screen">
-    <div class="wrapper flex h-full w-full">
+<body class="overflow-hidden">
+  <div class="box bg-[url('/whiteandblackwolf.jpg')] bg-cover h-screen w-screen p-0 flex">
+    <div class="wrapper flex h-screen w-screen">
         <div class="leftnav rounded-4xl p-6 h-screen flex items-center justify-center">
-          <ul class="flex flex-col space-y-4 items-center bg-white/20 backdrop:blur-md p-6 rounded-full border-t-1 border-l-1 border-white/50">
-            <li><i class="fa fa-home text-2xl text-white hover:border-2"></i></li>
+          <ul class="flex flex-col space-y-4 items-center bg-white/20 backdrop:blur-md md:p-6 p-2 rounded-full border-t-1 border-l-1 border-white/50">
+            <li><i class="fa fa-home text-2xl text-white hover:border-2 cursor-pointer"></i></li>
             <li><i class="fa fa-user text-2xl text-white"></i></li>
             <li><i class="fa fa-envelope text-2xl text-white"></i></li>
             <li><i class="fa fa-bell text-2xl text-white"></i></li>
@@ -20,9 +20,9 @@
           </ul>
         </div>
         <!-- main container -->
-        <div class="main my-5 mr-8 w-full grid grid-cols-4 mb-4 bg-white/20 backdrop:blur-md rounded-2xl border-t-1 border-l-1 border-white/50"> 
-          <div class="lcol mt-9 ml-4 p-8">
-            <h1 class="text-xl mr-2 text-red-500 mt-9 ml-2 font-bold text-1xl">NETFLIX</h1>
+        <div class="main mr-8 h-screen w-full grid md:grid-cols-4 grid-cols-1 bg-white/20 backdrop:blur-md rounded-2xl border-t-1 border-l-1 border-r-1 border-white/50 overflow-y-auto">
+          <div class="lcol ml-4 md:p-8 p-2 flex flex-col justify-between h-full">
+            <h1 class="text-xl mr-2 text-red-500 font-bold text-1xl">NETFLIX</h1>
             <div class="menuNav text-white">
               <ul>
                 <li><i class="fa fa-search text-xl mr-2 text-white mt-9 ml-2 font-bold text-1xl"></i>Browse</li>
@@ -34,25 +34,44 @@
                 New Trailers 🔥
             </div>
           <div class="flex flex-col space-y-6 mt-9 ml-2">
-            <div class="flex justify-between bg-amber-200 rounded-2xl p-15">
-
+            <div class="flex justify-between bg-amber-200/20 rounded-2xl p-15">
+              <section class="flex flex-col text-white">
+                <span class="subtitle">Movie</span>
+              </section>
+              <i class="fa fa-ellipsis-v text-white"></i>
             </div>
-            <div class="flex justify-between bg-amber-200 rounded-2xl p-15">
-
+            <div class="flex justify-between bg-amber-200/20 rounded-2xl p-15">
+                <section class="flex flex-col text-white">
+                <span class="subtitle">Movie</span>
+              </section>
+              <i class="fa fa-ellipsis-v text-white"></i>
             </div>
-            <div class="flex justify-between bg-amber-200 rounded-2xl p-15">
-
+            <div class="flex justify-between bg-amber-200/20 rounded-2xl p-15">
+                <section class="flex flex-col text-white">
+                <span class="subtitle">Movie</span>
+              </section>
+              <i class="fa fa-ellipsis-v text-white"></i>
             </div>
           </div>
           </div>
-          <div class="rcol col-span-3 bg-white/10 border-l-1 border-white/20 p-8">
-            <div class="mr-5 mt-9 grid grid-col gap-9">
-              <div class="p-3 gap-3 bg-amber-200 rounded-2xl">Box 1</div>
-              <div class="bg-amber-200 rounded-2xl p-25">Hero Movie</div>
+          <div class="rcol col-span-3 bg-white/10 border-l-1 border-white/20 md:p-8 p-2 flex flex-col justify-between h-full">
+            <div class="mr-5 mt-2 grid grid-col gap-9">
+              <div class="p-3 gap-3 bg-amber-200/20 rounded-2xl flex items-center justify-between">
+                <button class="relative">
+                  <i class="fa fa-bell text-xl text-gray-700"></i>
+                  <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500"></span>
+                </button>
+                <div class="flex items-center bg-white rounded-full px-15 py-1">
+                  <i class="fa fa-search text-gray-500 mr-2"></i>
+                  <input type="text" placeholder="Search..." class="bg-transparent outline-none text-gray-700 w-24"/>
+                </div>
+                <div class="w-8 h-8 rounded-full border-2 border-white bg-[url('/image.jpg')] bg-cover"></div>
+              </div>
+              <div class="bg-amber-200/20 rounded-2xl p-25">Hero Movie</div>
               <div class="text-2xl text-md text-white ml-2">Popcorn Mania</div>
                 <div class="boxparent grid-cols-4 grid gap-4">
                   <div class="moviebox bg-cover ">
-                    <div class="desc flex justify-between bg-amber-200 rounded-2xl p-15">
+                    <div class="desc flex justify-between bg-amber-200/20 rounded-2xl p-15">
                       <section class="flex flex-col text-white">
                         <span class="subtitle">Brooklyn Nine-Nine</span>
                         <span class="stats">2012 | Rated G | 1hr</span>
@@ -60,14 +79,14 @@
                       <i class="fa fa-ellipsis-v text-white"></i>
                     </div>
                   </div>
-                  <div class="boxchild bg-amber-200 rounded-2xl p-10">Box 2</div>
-                  <div class="boxchild bg-amber-200 rounded-2xl p-10">Box 3</div>
-                  <div class="boxchild bg-amber-200 rounded-2xl p-10">Box 4</div>
+                  <div class="boxchild bg-amber-200/20 rounded-2xl p-10">Box 2</div>
+                  <div class="boxchild bg-amber-200/20 rounded-2xl p-10">Box 3</div>
+                  <div class="boxchild bg-amber-200/20 rounded-2xl p-10">Box 4</div>
               </div>
-                            <div class="text-2xl text-md text-white ml-2">Continue Watching</div>
+                <div class="text-2xl text-md text-white ml-2">Continue Watching</div>
                 <div class="boxparent grid-cols-4 grid gap-4">
                   <div class="moviebox bg-cover ">
-                    <div class="desc flex justify-between bg-amber-200 rounded-2xl p-15">
+                    <div class="desc flex justify-between bg-amber-200/20 rounded-2xl p-15">
                       <section class="flex flex-col text-white">
                         <span class="subtitle">Movie</span>
                         <span class="stats">2012 | Rated G | 1hr</span>
@@ -75,9 +94,9 @@
                       <i class="fa fa-ellipsis-v text-white"></i>
                     </div>
                   </div>
-                  <div class="boxchild bg-amber-200 rounded-2xl p-10">Movie</div>
-                  <div class="boxchild bg-amber-200 rounded-2xl p-10">Movie</div>
-                  <div class="boxchild bg-amber-200 rounded-2xl p-10">Movie</div>
+                  <div class="boxchild bg-amber-200/20 rounded-2xl p-10">Movie</div>
+                  <div class="boxchild bg-amber-200/20 rounded-2xl p-10">Movie</div>
+                  <div class="boxchild bg-amber-200/20 rounded-2xl p-10">Movie</div>
           </div>
         </div>
       </div>
